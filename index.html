@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Registration Form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Student Registration Form</h1>
+
+  <form action="http://localhost:3000/register" method="post" enctype="multipart/form-data">
+
+    <fieldset>
+      <legend>Personal Details</legend>
+
+      <label for="fname">First Name:</label>
+      <input type="text" id="fname" name="fname" required><br><br>
+
+      <label for="lname">Last Name:</label>
+      <input type="text" id="lname" name="lname" required><br><br>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required><br><br>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone"><br><br>
+
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob"><br><br>
+
+      <p>Gender:</p>
+      <input type="radio" id="male" name="gender" value="Male">
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="gender" value="Female">
+      <label for="female">Female</label>
+      <input type="radio" id="other" name="gender" value="Other">
+      <label for="other">Other</label><br><br>
+    </fieldset>
+
+    <fieldset>
+      <legend>Academic Details</legend>
+
+      <label for="course">Select Course:</label>
+      <select id="course" name="course">
+        <option value="">--Select--</option>
+        <optgroup label="Computer Science">
+          <option value="cse">CSE</option>
+          <option value="it">IT</option>
+          <option value="aiml">AI & ML</option>
+        </optgroup>
+        <optgroup label="Electronics">
+          <option value="ece">ECE</option>
+          <option value="eee">EEE</option>
+        </optgroup>
+      </select><br><br>
+
+      <label for="year">Year of Study:</label>
+      <input type="number" id="year" name="year" min="1" max="4"><br><br>
+
+      <p>Subjects Interested In:</p>
+      <input type="checkbox" id="maths" name="subjects" value="Maths">
+      <label for="maths">Maths</label>
+      <input type="checkbox" id="dsa" name="subjects" value="DSA">
+      <label for="dsa">DSA</label>
+      <input type="checkbox" id="web" name="subjects" value="Web Development">
+      <label for="web">Web Development</label>
+      <input type="checkbox" id="ml" name="subjects" value="Machine Learning">
+      <label for="ml">Machine Learning</label><br><br>
+
+      <label for="marks">Average Marks (0–100):</label>
+      <input type="range" id="marks" name="marks" min="0" max="100"><br><br>
+    </fieldset>
+
+    <fieldset>
+      <legend>Additional Information</legend>
+
+      <label for="address">Address:</label><br>
+      <textarea id="address" name="address" rows="4" cols="40"></textarea><br><br>
+
+      <label for="profilePic">Upload Profile Picture:</label>
+      <input type="file" id="profilePic" name="profilePic"><br><br>
+
+      <label for="favcolor">Favourite Color:</label>
+      <input type="color" id="favcolor" name="favcolor"><br><br>
+
+      <label for="website">Personal Website:</label>
+      <input type="url" id="website" name="website"><br><br>
+
+      <label for="search">Search Skill:</label>
+      <input type="search" id="search" name="search"><br><br>
+    </fieldset>
+
+    <fieldset>
+      <legend>Form Controls</legend>
+
+      <input type="hidden" name="hiddenValue" value="12345">
+
+      <input type="reset" value="Reset Form">
+      <input type="submit" value="Register">
+      <button type="button" onclick="alert('Button Clicked!')">Click Me</button><br><br>
+     <label for="progress">Registration Progress:</label>
+      <progress id="progress" value="60" max="100"></progress><br><br>
+
+      <label for="meter">Score Meter (out of 10):</label>
+      <meter id="meter" value="7" min="0" max="10"></meter>
+    </fieldset>
+
+  </form>
+</body>
+</html>
